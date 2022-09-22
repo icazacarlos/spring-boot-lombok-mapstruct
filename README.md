@@ -40,3 +40,6 @@ $ ./gradlew bootRun
 - https://fahd-boudali.medium.com/spring-boot-mapstruct-lombok-e219bef471ab
 - https://mapstruct.org/
 - https://projectlombok.org/
+- https://github.com/mapstruct/mapstruct-examples/blob/main/mapstruct-lombok/build.gradle
+- https://stackoverflow.com/questions/62940620/mapstruct-lombok-with-gradle-in-spring-boot-bean-not-found
+- https://medium.com/javarevisited/make-your-life-easier-with-mapstruct-lombok-14225f207191
