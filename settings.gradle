@@ -27,4 +27,4 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "spring-boot-lombok-mapstruct"
+rootProject.name = "spring-boot-lombok-mapstruct-local"
