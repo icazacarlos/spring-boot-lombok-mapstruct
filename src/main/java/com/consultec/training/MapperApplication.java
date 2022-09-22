@@ -1,36 +1,38 @@
 package com.consultec.training;
 
+import java.math.BigDecimal;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import com.consultec.training.mapper.CarMapper;
-import com.consultec.training.model.domain.Car;
-import com.consultec.training.model.domain.CarType;
-import com.consultec.training.model.dto.CarDto;
+import com.consultec.training.mapper.AccountMapper;
+import com.consultec.training.model.domain.Cuenta;
+import com.consultec.training.model.dto.AccountDTO;
 
 @SpringBootApplication
-public class MapperApplication {
+public class MapperApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MapperApplication.class, args);
 	}
 
 	@Autowired
-	CarMapper carMapper;
+	AccountMapper accountMapper;
 
-	@Bean
-	public void testingMapper() {
+	@Override
+	public void run(String... args) throws Exception {
 
-		Car car = new Car("Explorer", 5, CarType.SEDAN);
-
-		// CarDto carDto = CarMapper.INSTANCE.carToCarDto(car);
-		CarDto carDto = carMapper.carToCarDto(car);
-
-		System.out.println(car);
-		System.out.println(carDto);
-
+		Cuenta cuenta = Cuenta.builder()
+			.nombre("nombre")
+			.numero("12345")
+			.tipo("CHECKING")
+			.balance(new BigDecimal("120.0"))
+			.build();
+		
+		AccountDTO account = accountMapper.cuentaToAccountDto(cuenta);
+		
+		System.out.println(account);
 	}
-
 }

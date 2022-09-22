@@ -1,0 +1,32 @@
+pluginManagement {
+  plugins {
+    id "org.springframework.boot" version "${springFrameworkBootVersion}"
+    id "io.spring.dependency-management" version "${springDependencyManagement}"
+  }
+
+  repositories {
+    maven {
+      name "BGRepository"
+      url "${BGRepository}"
+      allowInsecureProtocol = "${BGRepositoryInsecureProtocol}"
+    }
+
+    gradlePluginPortal()
+  }
+}
+
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
+  repositories {
+    maven {
+      name "BGRepository"
+      url "${BGRepository}"
+      allowInsecureProtocol = "${BGRepositoryInsecureProtocol}"
+    }
+
+    gradlePluginPortal()
+  }
+}
+
+rootProject.name = "spring-boot-lombok-mapstruct-local"

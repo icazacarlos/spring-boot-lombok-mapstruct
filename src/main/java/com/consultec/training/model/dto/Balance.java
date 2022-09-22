@@ -1,5 +1,7 @@
 package com.consultec.training.model.dto;
 
+import java.math.BigDecimal;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,8 +13,6 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class CarDto {
-	private String make;
-	private int seatCount;
-	private String type;
+public class Balance {
+	private BigDecimal available;
 }
