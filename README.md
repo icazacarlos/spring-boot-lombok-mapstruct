@@ -4,7 +4,7 @@
 
 ## Configuración
 
-Agregar en el archivo `~/.gradle.properties` lo siguiente:
+Agregar en el archivo `~/.gradle/gradle.properties` lo siguiente:
 
 ```properties
 # BGeneral - Training Sep 2022
