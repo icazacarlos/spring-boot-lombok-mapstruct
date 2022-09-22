@@ -31,3 +31,8 @@ publishing {
 tasks.withType(JavaCompile) {
   options.encoding = "UTF-8"
 }
+
+buildScan {
+  termsOfServiceUrl = "https://gradle.com/terms-of-service"
+  termsOfServiceAgree = "yes"
+}
