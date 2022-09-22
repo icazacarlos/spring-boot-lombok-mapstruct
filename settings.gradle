@@ -1,1 +1,15 @@
-rootProject.name = 'spring-boot-lombok-mapstruct'
+pluginManagement {
+  plugins {
+    id "org.springframework.boot" version "${springFrameworkBootVersion}"
+    id "io.spring.dependency-management" version "${springDependencyManagement}"
+  }
+
+  repositories {
+    maven {
+      url "https://repo.maven.apache.org/maven2/"
+    }
+    gradlePluginPortal()
+  }
+}
+
+rootProject.name = "spring-boot-lombok-mapstruct"
